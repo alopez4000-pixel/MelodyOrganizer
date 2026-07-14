@@ -1,0 +1,93 @@
+Week 6 App Dev Pipeline Progress
+
+Name / Team: Alexa Lopez (solo Project)
+
+1. Genre
+
+My genre is: Music
+
+I chose this genre because:
+
+I really like music and always wanted to find an app where i can both
+customize my playlists and listen to music without adds
+
+2. Story or Backstory.
+
+I am inspiring the idea for this app off an event that happened when i was around 11-ish. what happened
+was that i used to have a completely add free music playing app that also didnt rely on wifi, and i remember
+using that app for years until i got a new phone and resetted my old phone thinking the app i was using still 
+worked. fast forward to the day after when i was redownloading the previous apps i had to my new phone i was
+unable to find the music playing app and ever since that day ive never found it ever again. this specific event 
+is what lead me to create this app
+
+3. User Need
+
+The user needs to create a playlist organizer with the option of having miniplaylists within said playlist
+
+4. Product Definition
+
+I am building 2 different procedures that only become active whether a condition is met or not. each procedure will 
+directly contribute to the folder structure and how the application will look to the user
+
+5. Variables
+The main information containers are:
+1. MakeMiniProjectFolders()
+2.MakeProjectFolders()
+
+
+6. Functions / Procedures
+
+The main actions are:
+MakeMiniProjectFolders. this Procedure creates the folders used for
+the minifiles
+MakeFolderProjects. this procedure crates one main PlaylistFolder
+Console.WriteLine. this function shows the text and commands for the project
+
+
+7. Hat Strategy
+This week I worked in these hats:
+- Story hat: I created a story that tells the reader why i created this app
+- Logical hat: I defined the variables and actions for this project.
+- Visual hat: the application identifys the visual actions, naviates the pathways, etc.
+- Programmer hat: the code and the appication work well and the code takes the users actions and 
+creates the playlsits the user wants
+- Tester hat: the program was tested a total of 13 times, each test contributed to the impovement of the 
+app and each test taught me something new about the procedure
+
+8. Folder Maker App Progress
+
+What works: the application first asks the user to name the playlist and then it gives the option to create 5 minifolders
+if the user clicks yes, 5 minifolders will appear inside the main folder and if the user picks no only one folder (main folder)
+will apppear
+
+What I am still fixing: 
+
+1. how to create two seperate folders with one having Miniplaylists
+and the other not having any MiniPlaylists.
+
+2. how to sucessfully create a playlist with MiniFolders and reseting the dialoge
+to the first dialoug option.
+
+What I tested: 
+
+I have tested a reset procedure that would reset the dialoge back 
+to the first whenever the input = "yes" (it didnt work)
+I also attempted to create and if... then... elsef statement like:
+if input = "yes" then
+makeMiniProjectFolders()
+elself 
+MakeProjectFolders()
+this worked.
+
+9. Git Repository Link
+Paste link here:
+
+10. Study Notes
+One thing I learned about functions, procedures, data types, loops, JSON, SQL, or Git: 
+
+something i learned about procedures is that they are the backbone of the apllication,
+each procedure gives the code meaning and allow the code to understand what the user wants
+whenever they use the application.
+
+11. Screenshot Proof
+Attach screenshots of the app, generated folders/files, README, Git repo, and this Discord post.
