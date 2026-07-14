@@ -21,9 +21,9 @@ List the folders and files your app generates
 
 The app will generate 2 different types of folders.
 
-1. main playlist folders: these folders organize and store the music the user wants to save.
+1. MainPaylist folders: these folders organize and store the music the user wants to save.
 
-2. optional mini folders: these mini folders will be inside the main folders and are created to act as an option to 
+2. optional MiniPlaylist folders: these mini folders will be inside the main folders and are created to act as an option to 
 organize the users main folder by further categorizing the music.
 
 ## Story to App Connection
