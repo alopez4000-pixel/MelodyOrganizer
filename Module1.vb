@@ -35,8 +35,11 @@ Module Module1
         Dim input As String = 0
 
         While input <> "exit"
-            Console.WriteLine(" Enter Command")
-            ProjectName = Console.ReadLine
+            Console.WriteLine("
+===========================
+Welcome to MelodyOrganizer
+===========================")
+              ProjectName = Console.ReadLine
 
             Console.WriteLine("Create 5 miniPlaylists? Yes | No")
             input = Console.ReadLine.ToString
