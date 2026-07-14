@@ -27,7 +27,7 @@ Module Module1
     'https://drive.google.com/file/d/1qwb9Sq3bf9sWPdAUeiFX_xM1Knb4Ikpp/view
 
     Dim ProjectName As String
-
+    Dim StopStatement As String
     Dim FullDirectory As String
 
     Sub Main()
@@ -38,26 +38,51 @@ Module Module1
             Console.WriteLine(" Enter Command")
             ProjectName = Console.ReadLine
 
-            Console.WriteLine("Please enter a command  Exit | Create")
+            Console.WriteLine("Create 5 miniPlaylists? Yes | No")
+            input = Console.ReadLine.ToString
 
-            input = Console.ReadLine.ToString()
-
-            If input = "Create" Then
-
-                MakeProjectFolders()
-
+            If input = "Yes" Then
+                MakeMiniProjectFolders()
+            Else MakeProjectFolders()
             End If
 
-
+            'added to create a scenario where minifolders were added if the input = "yes" and added a procedure where Input does not = yes.
         End While
+
 
     End Sub
 
+    Private Sub MakeMiniProjectFolders()
+        Dim newfolderPath As String = My.Computer.FileSystem.SpecialDirectories.Desktop
+
+        If ProjectName = "" Then
+
+            ProjectName = " Not Set\"
+
+        End If
+
+        CreateProjectFolder(newfolderPath, ProjectName)
+
+        newfolderPath += "\" + ProjectName
+
+        FullDirectory = newfolderPath
+
+        CreateProjectFolder(newfolderPath, "\MainPlaylist")
+
+        CreateProjectFolder(newfolderPath, "\MainPlaylist")
+        CreateProjectFolder($"{newfolderPath}\MainPlaylist", "MiniPlaylist#1")
+        CreateProjectFolder($"{newfolderPath}\MainPlaylist", "MiniPlaylist#2")
+        CreateProjectFolder($"{newfolderPath}\MainPlaylist", "MiniPlaylist#3")
+        CreateProjectFolder($"{newfolderPath}\MainPlaylist", "MiniPlaylist#4")
+        CreateProjectFolder($"{newfolderPath}\MainPlaylist", "MiniPlaylist#5")
+
+        WriteFile("ReadMe.txt", newfolderPath)
+        WriteFile("ReadMe.txt", $"{newfolderPath}\MainPlaylist")
+
+        Console.WriteLine("Project created in: " + FullDirectory)
+    End Sub
+    'Added this sub to create 5 optional miniplaylists for the user
     Private Sub MakeProjectFolders()
-
-        'TODO: Add Json database to store project information
-
-        'TODO: Change MakeP2PProjectFolders to MakeProjectFolders
 
         Dim newFolderPath As String = My.Computer.FileSystem.SpecialDirectories.Desktop
 
@@ -67,27 +92,16 @@ Module Module1
 
         End If
 
-        '  My.Computer.FileSystem.CreateDirectory(newFolderPath + ProjectName)
-
         CreateProjectFolder(newFolderPath, ProjectName)
 
         newFolderPath += "\" + ProjectName
 
         FullDirectory = newFolderPath
-        'TODO:Adjust the folder to organize playlist data if needed
-        CreateProjectFolder(newFolderPath, "\Docs")
-        CreateProjectFolder($"{newFolderPath}\Docs", "Ref")
-        CreateProjectFolder($"{newFolderPath}\Docs", "Word")
-        CreateProjectFolder($"{newFolderPath}\Docs", "PDF")
-        CreateProjectFolder($"{newFolderPath}\Docs", "Excel")
-        CreateProjectFolder($"{newFolderPath}\Docs", "Cloud")
 
-        CreateProjectFolder(newFolderPath, "\Assets")
-        CreateProjectFolder($"{newFolderPath}\Assets", "Art")
-        CreateProjectFolder($"{newFolderPath}\Assets", "Images")
+        CreateProjectFolder(newFolderPath, "\MainPlaylist")
 
         WriteFile("ReadMe.txt", newFolderPath)
-        WriteFile("ReadMe.txt", $"{newFolderPath}\Docs")
+        WriteFile("ReadMe.txt", $"{newFolderPath}\MainPlaylist")
 
 
 
@@ -116,8 +130,7 @@ This app creates music playlists to organize the users music into different genr
 Explain how to open and run the VB.NET project.
 
 to start the project the user will have to first have to name a playlist in order to create it, afterwards 
-they can either add music to said playlist or different playlists within that playlist to organize it even more
-ex: (main playlist: study music, Miniplaylist(s): classical, lofi, etc)
+they can either create one main playlist or create 5 optional MiniPlaylists to organize the music even further
 
 ## Folder Structure Created
 
@@ -125,9 +138,9 @@ List the folders and files your app generates
 
 The app will generate 2 different types of folders.
 
-1. main playlist folders: these folders organize and store the music the user wants to save.
+1. MainPlaylist folders: these folders organize and store the music the user wants to save.
 
-2. optional mini folders: these mini folders will be inside the main folders and are created to act as an option to 
+2. optional MiniPlaylist folders: these mini folders will be inside the main folders and are created to act as an option to 
 organize the users main folder by further catagorizing the music.
 
 ## Story to App Connection
