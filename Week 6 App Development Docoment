@@ -1,0 +1,121 @@
+# Week 6 App Development Document
+
+## Project / Team
+
+Project name: “MusicOrganizer”
+
+Student name(s): Alexa Lopez
+
+Team strategy: 
+
+If you are working with a team, list every team member and explain who is responsible for each part. If you are working alone, write "Individual project."
+
+## 0. Genre (Complete)
+
+Choose one genre and name it clearly.
+
+Genre: Music
+
+Choose from Anime, Music, Movie, Horror, or another genre you identify.
+
+Explain why this genre fits your app idea: this genre fits my app idea because i plan to create an app that will create a playlist that is able to play music
+
+## 1. Backstory (Complete)
+
+Describe the world and context. This may be real, fantasy, science fiction, personal, professional, or practical.
+
+What happened before the app exists?
+
+Before the app existed I struggled to find a good free music streaming service that didn't play 5 ads every 30 minutes so I decided to attempt to create my own music playing app.
+
+Who lives or works in this world?
+
+Myself
+
+What pressure, problem, confusion, or need exists?
+
+Problem: not finding good free music streaming service
+
+## 2. Story / User Need (complete)
+
+Who is the user?
+Myself
+
+What does the user need?
+ music playlist
+
+What problem are they trying to solve?
+
+I am trying to create a functional music playlist that will store music in either a custom playlist or create playlists that will separate music by genre/Vibe
+Why does this matter to them?
+This matters to me because I really enjoy music and rarely do anything without listening to it but have always struggled to find a music playing app that didn’t have a paywall that 
+that lead me to wanting to create something for myself
+
+
+## 3. Product Definition
+
+What are you building inside the story?
+I will be building a music organizer app
+What will the app help the user do?
+This app will organize music and 
+What is the smallest useful version of this app?
+
+## 4. Variables
+
+List containers of information your app may need.
+
+
+
+Variable Name(s) | Data Type | What it stores | Example Value
+Project Name | String | Name of the project folder (playlist) | “Study music”
+Main Playlist | Integer |The main playlist which can either act as the main playlist or store different playlists in one place | 1
+Mini Playlist(s) | integers | Different types of playlists that can be stored within the main folder (optional) | 5 
+
+
+
+## 5. Functions and Procedures
+
+List actions the app needs to perform.
+
+Function/Procedure | Purpose | Input | Output or Result |
+Name Playlist |Creates playlists that allow music to be stored | Playlist path | Names the playlist
+Create MiniPlaylist | Creates 5 small playlists | “yes” | Creates 5 miniplaylists within the main playlist
+CreateMiniPlaylist | Doesnt create the mini playlists | “no” | Only creates the main playlist
+
+
+
+## 6. Questions and Answers
+
+Identify possible problems before coding.
+
+Question: how can i add a playlist in the files?
+
+Answer or plan: i plan to create a private sub that declares the function for MiniPlaylists and figure out how to connect those functions to a Command
+
+Question: how will I create a command that doesn't allow miniplaylists
+
+Answer or plan: I plan to either make a “if… then. Elself” statement that defines what command will create the mini playlist and what command wont.
+
+## 7. Execution Strategy
+
+What will you build first?
+First i will add the commands needed for each action then I will work on the procedures and code needed to make the Commands work
+How will you test it?
+Anytime i add or remove something from the code, test the application with the change, and update the note on what the change did to the application, repeat until i am satisfied with the results
+What screenshots will prove it works?
+I will take screenshots of the code i use for the application, then i will take screenshots of the application itself, later i will take 3 different screenshots on each function to show how each function visually affects the program.
+
+What will you refactor or clean up if you have time?
+
+If i have time i would like to make the program look more visually appealing to the user and not look like a plain application and i would really like to play with the code to see if its possible to add music directly into the files
+
+## 8. Git Repository
+
+Repository link: alopez4000-pixel/MelodyOrganizer: saving progress 
+
+What files should the instructor grade?
+Module1.Vb
+ReadMe.md
+DiscordPrompt
+Week 6 App development
+What files should the instructor ignore?
